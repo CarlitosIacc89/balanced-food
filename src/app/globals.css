@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+section.hero{
+  @apply grid;
+  grid-template-columns: .6fr .4fr;
+}
+.check p{
+  @apply flex gap-2 text-gray-500 text-[16px] md:text-lg font-semibold items-center
+}
+.grid-item{
+  @apply overflow-hidden rounded-3xl relative
+}
+.grid-item img{
+  @apply w-full h-52 object-cover rounded-3xl transition-all duration-200 hover:transform hover:scale-110;
+}
+.brands a{
+  @apply  border-4 mx-auto w-full h-32 rounded-2xl p-2
+}
+.brands a img{
+  @apply w-full h-full rounded-2xl
+}
+.link a{
+  @apply p-2 rounded-xl
+}
+.innerLink a{
+  @apply p-2 rounded-xl
+}
+.innerLink a:hover{
+  @apply bg-red-500 text-white
+}
+
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="text"],
+input[type="number"],
+textarea, select {
+  @apply sm:block mb-2 w-full rounded-md;
+  @apply border p-2 bg-gray-100 outline-none focus:border-red-300
+}
+input[type="email"]:disabled,
+input[type="password"]:disabled,
+input[type="tel"]:disabled,
+input[type="text"]:disabled {
+  @apply bg-gray-300 border-0 text-gray-500 cursor-not-allowed
+}
+label{
+  @apply text-sm text-gray-500 font-bold
+}
+.admin a{
+  @apply p-2 rounded-md font-bold border-[2px] border-gray-300 hover:bg-red-400;
+  @apply hover:text-white w-28 select-none
+}
+.active{
+  @apply bg-red-400 text-white
+}
+button,
+.button {
+  @apply flex justify-center gap-2  text-white font-semibold;
+  @apply  rounded-md px-6 py-2
+}
+.new-product{
+    @apply flex justify-center gap-2 w-full text-gray-700 font-semibold;
+    @apply border border-x-0 border-gray-300 px-6 py-2
+}
+
+button[type="submit"]:disabled{
+  @apply bg-red-300 cursor-not-allowed
+}
+
+.table-head th{
+  @apply py-4
+}
+.table-head td{
+  @apply py-2 text-gray-600 text-sm font-bold border-b
+}
+
+/* .table-head tr{
+  @apply border
+} */
+
+.confirm span{
+  @apply font-bold text-gray-500 text-base
+}
+
+.order > div{
+  @apply p-2
+}
+.row td{
+  @apply py-1 font-semibold text-gray-600
+}
+
+.information tr{
+  @apply border-b
+}
+.information tr th{
+  @apply p-2
+}
+.information tr td{
+  @apply font-bold
+}
+.insta{
+  background: radial-gradient(
+    circle at 33% 100%,
+    #fed373 4%,
+    #f15245 30%,
+    #d92e7f 62%,
+    #9b36b7 85%,
+    #515ecf
+  );
+  border-radius: 30%;
+}
+.insta:before{
+  content: "";
+  border: 3px solid #fff;
+  border-radius: 30%;
+  width: 1.3rem;
+  height: 1.3rem;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  margin: auto;
+}
+.insta:after {
+  content: "";
+  border: 3px solid #fff;
+  border-radius: 100%;
+  width: .7rem;
+  height: .7rem;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  margin: auto;
+}
+
+
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+  height: 450px;
+}
+
+.carrusel img {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  height: 400px;
+  width: 50%;
+}
