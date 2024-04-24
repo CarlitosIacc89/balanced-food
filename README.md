@@ -1,36 +1,23 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Tienda de Alimentos para Mascotas
 
-First, run the development server:
+Este proyecto es un ecommerce construido con Next.js, React.js, MongoDB y TailwindCSS. La plataforma permite a los usuarios autenticarse, explorar productos, y realizar ordenes de compras. Además, cuenta con una pequeña seccion dedicadas a estadísticas y gestión de usuarios. (La misma no esta terminada y requiere de algunos pequeños cambios)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Características Principales
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Autenticación de Usuarios**: Los usuarios pueden crear cuentas, iniciar sesión y gestionar su perfil.
+- **Navegación por Productos**: Amplia gama de alimentos para mascotas, con opciones de filtro y ordenación.
+- **Estadísticas**: Sección dedicada a mostrar datos importantes, como ventas y tendencias.
+- **Gestión de Usuarios**: Pestaña para administrar la información de los usuarios registrados.
+- **Carrito de Compras**: Funcionalidad completa para agregar productos al carrito.
+- **Diseño Responsivo**: El sitio se adapta a diferentes tamaños de pantalla gracias a TailwindCSS.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Tecnologías Utilizadas
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Next.js**: Framework React para aplicaciones web estáticas y dinámicas.
+- **React.js**: Biblioteca para la construcción de interfaces de usuario interactivas.
+- **MongoDB**: Base de datos NoSQL utilizada para el almacenamiento de datos.
+- **TailwindCSS**: Framework de CSS utilitario para estilos flexibles y adaptables.
+- **JWT (JSON Web Tokens)**: Para autenticación segura de usuarios.
+- **Cloudinary**: Servicio para cargar y almacenar imágenes en la nube.
