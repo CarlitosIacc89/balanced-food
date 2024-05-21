@@ -19,7 +19,6 @@ export async function GET(req) {
 
     return NextResponse.json(userDoc);
   } catch (error) {
-    console.log(error);
     return NextResponse.json(
       { error: "Error al obtener usuarios" },
       { status: 500 }
@@ -44,7 +43,6 @@ export async function DELETE(req) {
     }
     return NextResponse.json(true);
   } catch (error) {
-    console.log(error);
     return NextResponse.json("Error al eliminar usuario");
   }
 }

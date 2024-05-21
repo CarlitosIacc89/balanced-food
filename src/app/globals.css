@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+@apply bg-gray-200
+}
 
 section.hero{
   @apply grid;
@@ -23,10 +26,10 @@ section.hero{
   @apply w-full h-full rounded-2xl
 }
 .link a{
-  @apply p-2 rounded-xl
+  @apply p-2 rounded-sm
 }
 .innerLink a{
-  @apply p-2 rounded-xl
+  @apply p-2 rounded-sm text-gray-500 text-sm
 }
 .innerLink a:hover{
   @apply bg-red-500 text-white
@@ -39,7 +42,7 @@ input[type="text"],
 input[type="number"],
 textarea, select {
   @apply sm:block mb-2 w-full rounded-md;
-  @apply border p-2 bg-gray-100 outline-none focus:border-red-300
+  @apply border p-2 bg-white outline-none focus:border-red-300
 }
 input[type="email"]:disabled,
 input[type="password"]:disabled,
@@ -162,3 +165,35 @@ button[type="submit"]:disabled{
   height: 400px;
   width: 50%;
 }
+.table-orders td{
+  @apply text-center
+}
+
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(100%);
+          }
+    
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+    
+        .marquee {
+          white-space: nowrap;
+          overflow: hidden;
+          position: relative;
+          width: 100%;
+        }
+    
+        .marquee-content {
+          display: inline-flex;
+          align-items: center;
+          padding-left: 10%;
+          animation: scroll-left 25s linear infinite;
+        }
+        .marquee-content p{
+          display: flex;
+          align-items: center;
+          gap: 4px;
+        }

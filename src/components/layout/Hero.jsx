@@ -1,17 +1,28 @@
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import ProductItem from "./ProductItem";
+import Modal from "./Modal";
 
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
-import ProductItem from './ProductItem'
-
-const Hero = ({item}) => {
-
+const Hero = ({ item }) => {
+  const [modal, setModal] = useState(false);
+  useEffect(() => {
+    if (modal) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    }
+  }, [modal]);
   return (
-    <section className='mt-8'>
+    <section className="mt-8">
+      {modal && <Modal {...{ modal, setModal }} />}
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16 bg-gradient-to-t from-white to-black rounded-md">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
           <div className="relative w-full h-full overflow-hidden rounded-lg py-4  lg:h-full bg-gradient-to-r from-black to-blue-950">
-            <ProductItem {...{item}} />
+            <ProductItem {...{ item, modal, setModal }} />
           </div>
 
           <div className="lg:py-24 text-white">
@@ -37,7 +48,7 @@ const Hero = ({item}) => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 md:px-8">
-        <div className="flex flex-col md:flex-row gap-4 p-4 border rounded-xl ">
+        <div className="flex flex-col md:flex-row gap-4 p-4 border rounded-xl bg-white ">
           <div className="min-w-[40%]">
             <Image
               className="w-full h-full object-cover"
@@ -72,7 +83,7 @@ const Hero = ({item}) => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row gap-4 p-4 border rounded-xl">
+        <div className="flex flex-col md:flex-row gap-4 p-4 border rounded-xl bg-white">
           <div className="min-w-[40%]">
             <Image
               className="w-full h-full object-cover"
@@ -100,9 +111,8 @@ const Hero = ({item}) => {
           </div>
         </div>
       </div>
-      
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

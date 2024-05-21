@@ -91,7 +91,7 @@ export async function POST(req) {
   }
 }
 
-export async function GET() {
+export async function GET(req) {
   await mongoose.connect(process.env.MONGO_URL);
 
   const ordersDoc = await Orders.find();

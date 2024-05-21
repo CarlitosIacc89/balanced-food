@@ -17,7 +17,7 @@ export const metadata = {
     description: "Encuentra el alimento que necesitas al mejor precio",
     images: [
       {
-        url: "http://localhost:3000/DomesticPet.jpg",
+        url: "https://res.cloudinary.com/dtlchh1km/image/upload/v1716256111/balancedfood/Captura_de_pantalla_2024-05-20_224449_nehf6l.png",
         width: 600,
         height: 400,
       },

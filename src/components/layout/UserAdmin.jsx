@@ -1,13 +1,11 @@
 "use client"
-import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
-import { UseProfile } from '../UseProfile'
+
 
 const UserAdmin = () => {
 
-    const {data: dataUser} = UseProfile()
 
     const path = usePathname()
   return (
@@ -17,7 +15,6 @@ const UserAdmin = () => {
                   <div className='flex flex-col lg:flex-row md:flex-row sm:flex-row justify-center items-center gap-4 my-4 admin'>
                       <Link className={path.includes("profile") ? "active" : ""} href={"/profile"}>Perfil</Link>
                       <Link className={path.includes("users") ? "active" : ""} href={"/users"}>Usuarios</Link>
-                      {/* <Link className={path.includes("categories") ? "active" : ""} href={"/categories"}>Categorias</Link> */}
                       <Link className={path.includes("products-items") ? "active" : ""} href={"/products-items"}>Productos</Link>
                       <Link className={path.includes("brands") ? "active" : ""} href={"/brands-admin"}>Marcas</Link>
                       <Link className={path.includes("orders") ? "active" : ""} href={"/orders"}>Pedidos</Link>
